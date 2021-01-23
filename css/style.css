@@ -40,7 +40,6 @@
     .nav {
         display: flex;
         align-items: center;
-        
     }
     .container {
         width: 1200px;
@@ -195,7 +194,6 @@
         text-transform: uppercase;
         margin-bottom: 10px;
     }
-
     .our-advantages {
         padding-bottom: 94px;
         padding-top: 94px;
@@ -203,8 +201,7 @@
     .our-work{
         display: block;
         padding-bottom: 94px;
-        justify-content: center;
-        
+        justify-content: center;  
     }
     .section-title {
         font-size: 36px;
@@ -299,7 +296,6 @@
         margin-bottom: 16px;
         color: var(--primary-text-color);
     }
-   
     .visually-hidden {
         position: absolute;
         clip: rect(0 0 0 0);
@@ -426,7 +422,6 @@
         margin-top: 30px;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-  
     .one-work-link:focus,
     .one-work-link:hover {
     display: block;
@@ -458,13 +453,11 @@
      .thumb{
          position: relative;
          overflow: hidden;
-     }
-     
+     } 
     .one-work-link:focus .projects-text,
-    .one-work-link:hover .projects-text{
+    .one-work-link:hover .projects-text {
         transform: translateY(0);
     }
-   
     .projects-item {
         padding: 20px 24px;
         border: 1px solid #EEEEEE;   
@@ -553,7 +546,6 @@
   height: 90px;
   background-color: var(--third-background-color);
   color: var(--link-color);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -592,7 +584,6 @@ color: var(--accent-color);
     color: var(--link-color);
     background-position: center; 
     margin-right: 6px;  
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -610,7 +601,6 @@ margin-right: 0;
     height: 20px;
     fill: currentColor;   
 }
-
 footer  .icon {
     color: var(--third-background-color);  
 }
@@ -675,7 +665,6 @@ footer .social-link:focus {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
-
 .subscribe::after {
     background-image: url(../img/svg/task_6/optimized/send.svg);
     display: block;
@@ -683,9 +672,7 @@ footer .social-link:focus {
     width: 24px;
     height: 24px;
     margin-left: 10px;
-
     background-color: inherit; 
-   /*  background-position: 50% 50%; */
     background-repeat: no-repeat;
   }
 .footer-block {
@@ -711,19 +698,17 @@ footer .social-link:focus {
     background-color: rgba(0,0,0,0.2);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }    
 .backdrop.is-hidden {
  opacity: 0;
  pointer-events: none;
-
 }
 .modal {
     position: absolute;
     min-width: 528px;
     min-height: 581px;
     padding: 40px;
-  
+    padding-bottom: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -746,6 +731,11 @@ footer .social-link:focus {
     color: var(--icon-color);
     cursor: pointer;
 }
+.close-icon:focus,
+.close-icon:hover {
+    fill: var(--accent-color);
+    background-color: var(--third-background-color);
+}
 .your-contact {
     font-size: 20px;
     font-weight: 700;
@@ -758,13 +748,10 @@ footer .social-link:focus {
 }
 .modal-contacts {
     margin-right: auto;
-    margin-left: auto;
-  
+    margin-left: auto; 
 }
 .form-field {
-    outline: 1px solid tomato;
     margin-bottom: 10px;
-    
 }
 .modal-form {
    display: block;
@@ -773,7 +760,10 @@ footer .social-link:focus {
    line-height: 1.12;
    letter-spacing: 0.01em;
    text-align: left;
-    color: var(--primary-text-color);
+   color: var(--primary-text-color);
+   position: relative;
+}
+.input-format {
     position: relative;
 }
 .form-field input{
@@ -781,40 +771,50 @@ footer .social-link:focus {
     height: 40px;
 }
 .input-form {
-    
-    
     margin-top: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+}
+.input-form:focus,
+.input-form:hover {
+    border: 1px solid var(--accent-color); 
+    outline: none;
+}
+.input-form:focus + .icon-modal,
+.input-form:hover + .icon-modal,
+.icon-modal:hover{
+    fill: var(--accent-color); 
 }
 .icon-modal {
     position: absolute;
-    
-    left: 0;
-    bottom: 0;
+    left: 12px;
+    top: 50%;
     width: 18px;
     height: 18px;
-    transform: translate(50%, -50%);
     color: var(--secondary-text-color);
     fill: currentColor;
 }
-/* textarea {
-    display: block;
-    width: 100%;
-    margin-top: 4px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding-left: 42px;
-} */
-.modal-form textarea{
+.comment {
     display: block;
     padding: 12px 16px;
     font-size: 12px;
     line-height: 1.2px;
     letter-spacing: 0.01em;  
-    height: 120px; 
-    /* color: #000; */
+    height: 138px;
+    margin-top: 4px;
+}
+.modal-form:hover textarea,
+.modal-form:focus textarea,
+.modal-form:active textarea {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+.comment:active,
+.comment:focus,
+.comment:hover {
+    border: 1px solid var(--accent-color);
+    outline: none;  
 }
 .form-field textarea{
     width: 100%;
@@ -825,4 +825,48 @@ footer .social-link:focus {
 }
 .comment::placeholder {
     color: rgba(117, 117, 117, 0.5); 
+}
+.link-agreement {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+.send-submit {
+        display: block;
+        background-color: var(--accent-color);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: var(--third-background-color);
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 30px;
+        padding: 10px 32px;
+        border: 2px;
+        border-radius: 4px;
+        cursor: pointer; 
+}
+.license {
+    display: block;
+}
+.icon-check {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    background-color: var(--third-background-color);
+}
+.input-check:checked ~ .icon-check{
+    background-color: var(--accent-color);
+    background-image: url(../img/svg/task_6/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-color);
 }
